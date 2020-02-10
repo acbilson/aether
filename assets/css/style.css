@@ -107,6 +107,14 @@ strong {
     line-height: 1.7;
     color: white;
 }
+.hamburger-menu-overlay-header {
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1.7;
+    color: white;
+}
+
 .post {
     margin: 0 0 1em 0;
     line-height: 1.6;
