@@ -127,8 +127,17 @@ p {
     font-size: 0.8em;
     margin: 0;
 }
+.post-footer {
+    display: block;
+    color: #7a7b7c;
+    font-size: 0.8em;
+    margin: 0;
+}
 .post-figure {
     margin: 1.5em 0;
+}
+.post-img {
+    border-radius: 50%;
 }
 .dropcase > p:first-of-type::first-letter {
     float: left;
@@ -346,6 +355,7 @@ li ul, li ol {
     padding-left: 1em;
 }
 li > p {
+    padding-top: .5em;
     margin: 0;
 }
 code {

@@ -9,14 +9,9 @@
         	<h1 class="post-title">{{ .Title }}</h1>
           {{ if isset .Params "date" }}<p class="post-date">Posted <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>{{ end }}
         </header>
-        {{ with .Resources.GetMatch "featuredImage" -}}
+        {{ with .Params.featuredImage -}}
         <picture class="post-figure">
-          {{ with $.Resources.GetMatch (replace (.Title) (path.Ext (.Title)) ".webp") -}}
-          <source srcset="{{ .Permalink }}" type="image/webp">
-          {{- end }}
-          {{ $featured := .Resize "800x Lanczos" }}
-          <source srcset="{{ $featured.Permalink }}">
-          <img src="{{ $featured.Permalink }}" {{ with .Params.description -}} alt="{{ . }}" {{- end }}>
+            <img src="{{ .large }}" alt="{{ .alt }}">
         </picture>
         {{- end }}
         {{ if .Params.toc -}}
@@ -24,9 +19,8 @@
           {{ .TableOfContents }}
         {{- end }}
         {{ .Content }}
-        <p class="post-date">To leave a comment, <a href="mailto:acbilson@gmail.com">email me</a> with a reference to this post and I may add your comment directly to the post. :)</p>
+        {{ partial "post-footer.html" }}
       </article>
-      {{ template "_internal/disqus.html" . }}
     </main>
     <nav class="end-nav side-padding">
       {{ with .PrevInSection }}
