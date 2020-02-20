@@ -245,7 +245,6 @@ sup > a {
 .card-img {
     border-radius: 0.3rem 0.3rem 0 0;
     margin: 0 0 -0.28em 0;
-    max-height: 10em;
     object-fit: cover;
 }
 .card-img-overlay {
@@ -475,7 +474,7 @@ footer {
     .card-img {
         border-radius: 0.2rem 0 0 0.2rem;
         margin: 0;
-        max-height: unset;
+        max-height: 250px;
         height: 100%;
         width: 15em;
     }
