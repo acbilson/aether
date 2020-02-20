@@ -7,6 +7,7 @@
   <title>{{ if not .IsHome }}{{with .Title }}{{ . }} &middot; {{ end }}{{ end }}{{ .Site.Title }}</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="shortcut icon" href="{{ .Site.BaseURL }}/favicon.ico" />
 
   <!-- concats all css into a single, minified file -->
   {{ $mainStyle := resources.Get "css/style.css" }}
