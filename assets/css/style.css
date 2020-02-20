@@ -160,7 +160,6 @@ sup > a {
   left: 30%;
   width: 40%;
   text-align: center;
-  font-size: 2.5em;
   background-color: #ecedef;
   z-index: 1;
   border-radius: 50%;
@@ -475,6 +474,10 @@ footer {
         font-weight: normal;
         font-size: 4.2em;
     }
+    .title-img-overlay {
+      font-size: 2.5em;
+    }
+
     .card {
         border-radius: 0.2rem;
         /* margin: 2.5em 0; */
