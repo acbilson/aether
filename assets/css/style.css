@@ -1,7 +1,8 @@
 body {
     font-family: 'Book Antiqua', serif;
+    font-size: 1.125em;
+    line-height: 1.575em;
     color: #141823;
-    font-size: 1.1em;
     background-color: #ecedef;
     margin: 0;
     padding: 0 0 2em 0;
@@ -13,7 +14,8 @@ body {
     word-break: break-word;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: Geneva, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
+    padding-bottom: 0.125em;
 }
 p {
     margin: 1.5em 0;
@@ -36,7 +38,7 @@ sup > a {
     align-items: center;
 }
 .nav-header {
-    font-family: Geneva, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     margin: 0;
 }
 .nav-text {
@@ -45,7 +47,7 @@ sup > a {
     font-size: 0.8em;
 }
 .hamburger-menu {
-    font-family: Geneva, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     display: block;
     position: relative;
     z-index: 105;
@@ -125,7 +127,6 @@ sup > a {
 
 .post {
     margin: 0 0 1em 0;
-    line-height: 1.6;
 }
 .post-header {
     margin: 0 0 1.5em 0;
@@ -221,7 +222,6 @@ sup > a {
     margin: 0;
 }
 .list-header-content {
-    margin: 5em 0;
     line-height: 1.6em;
 }
 .card-container {
@@ -377,7 +377,7 @@ sup > a {
     clear: both;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: Geneva, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     margin: 1.5em 0 -0.5em 0;
     clear: both;
 }
@@ -471,7 +471,8 @@ footer {
 /* Medium devices (tablets, ~641px and up) */
 @media only screen and (min-width: 40.063em) {
     body {
-        font-size: 1.15rem;
+        font-size: 1.125rem;
+        line-height: 1.575em;
     }
     .nav-bar {
         padding: 0.8em 0;
@@ -506,10 +507,10 @@ footer {
         padding: 1.5em 1.3em;
     }
     .card-title {
-        font-size: 1.27em;
+        font-size: 1.25em;
     }
     .card-text {
-        font-size: 0.95em;
+        font-size: 1em;
         margin: 1.2em 0;
     }
     .card-subtext {
