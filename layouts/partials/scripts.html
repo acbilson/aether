@@ -1,2 +1,5 @@
-  {{ $hamburgerjs := resources.Get "js/hamburger.js" | minify }}
-  <script src="{{ $hamburgerjs.Permalink }}"></script>
+  {{ $hamburgerjs := resources.Get "js/hamburger.js" }}
+  {{ $accordionjs := resources.Get "js/accordion.js" }}
+  {{ $sitejs := slice $hamburgerjs $accordionjs | resources.Concat "js/concated.js" | minify }}
+
+  <script src="{{ $sitejs.Permalink }}"></script>
