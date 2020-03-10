@@ -7,7 +7,21 @@
       <article class="post {{ if ne .Params.dropcap false }}dropcase{{ end }}">
         <header class="post-header">
         	<h1 class="post-title">{{ .Title }}</h1>
-          {{ if isset .Params "date" }}<p class="post-date">Posted <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>{{ end }}
+          <div class="post-date">
+          {{ if isset .Params "date" }}
+          Posted <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time><br />
+          {{ end }}
+           <!-- Adds tags to the post if they exist -->
+          {{ $taxo := "tags" }}
+          {{ if isset .Params $taxo }}
+          Tags:
+            {{ range $name := .Param $taxo }}
+              {{ with $.Site.GetPage (printf "/%s/%s" $taxo ( $name | urlize)) }}
+              <span><a href="{{ .Permalink }}">{{ $name }}</a></span>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          </div>
         </header>
         {{ with .Params.featuredImage -}}
         <picture class="post-figure">

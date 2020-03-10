@@ -132,6 +132,7 @@ sup > a {
     margin: 0 0 1.5em 0;
 }
 .post-title {
+    color: black;
     font-size: 1.8em;
     line-height: 1.2;
     margin: 0 0 0.4em 0;
@@ -143,8 +144,8 @@ sup > a {
     margin: 0;
 }
 .post-header {
-    display: block;
     color: #7a7b7c;
+    display: block;
     font-size: 0.8em;
     margin: 0;
 }
@@ -273,6 +274,11 @@ sup > a {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+}
+.tag-card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 .card-img-container {
     position: relative;
