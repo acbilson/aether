@@ -328,6 +328,20 @@ sup > a {
     word-spacing: 0.5em;
     border-left: thin solid #7a7b7c;
 }
+.diagram-node-circle {
+  stroke: black;
+  fill: gray;
+}
+.diagram-node-text {
+  fill: black;
+  font-variant: small-caps;
+  font-family: Verdana, Geneva, sans-serif;
+}
+.diagram-link {
+  stroke: gray;
+  stroke-width: 1;
+  opacity: 40%;
+}
 .end-nav {
     width: 100%;
     max-width: 49rem;

@@ -10,6 +10,9 @@
         {{ with .Description }}<p class="list-header-subtext">{{ . }}</p>{{ end }}
       </header>
       {{- end }}
+
+      <!-- The anchor for the tag cloud diagram -->
+      <svg width="800" height="600"></svg>
       {{ with .Content -}}
       <section class="list-header-content">
         {{ . }}
@@ -32,8 +35,19 @@
         {{- end }}
       {{- end }}
       </div>
+
     </main>
     {{ partial "footer.html" . }}
     {{ partial "scripts.html" . }}
+
+    <!-- this displays the tags cloud diagram after other scripts load. I've done it this way so that I can use Hugo
+    to pass along the path to the JSON file. -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        display_diagram("/posts/diagram.json");
+      });
+    </script>
+
+    <h1>{{ .Site.Data.Permalink }}</h1>
   </body>
 </html>
