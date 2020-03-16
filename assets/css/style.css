@@ -328,6 +328,8 @@ sup > a {
     word-spacing: 0.5em;
     border-left: thin solid #7a7b7c;
 }
+.diagram-svg {
+}
 .diagram-node-circle {
   stroke: black;
   fill: gray;

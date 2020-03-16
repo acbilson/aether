@@ -6,10 +6,12 @@ function display_diagram(dataPath) {
     nodes_data = data['nodes'];
     links_data = data['links'];
 
-    var svg    = d3.select("svg"),
-        width  = +svg.attr("width"),
-        height = +svg.attr("height");
+    var svg = d3.select("svg");
+    var viewBox = svg.attr("viewBox").split(/\s+|,/);
+    var width = viewBox[2];
+    var height = viewBox[3];
 
+    console.log(svg);
     /*
     * SIMULATION
     */
