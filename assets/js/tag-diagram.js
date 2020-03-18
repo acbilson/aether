@@ -65,7 +65,9 @@ function display_diagram(dataPath) {
                          .attr("r", function(d){return d.name.length*4});
                          */
 
-        var text = node.append("text")
+        var text = node.append("a")
+                         .attr("href", function(d){return `${d.path}`})
+                       .append("text")
                          .attr("class", "diagram-node-text")
                        .text(function(d){return d.name})
                        .attr("font-size","12px")
