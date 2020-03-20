@@ -8,7 +8,7 @@
   <p>Tags:
     {{ range $name := .Param $taxo }}
       {{ with $.Site.GetPage (printf "/%s/%s" $taxo ( $name | urlize)) }}
-      <span><a href="{{ .Permalink }}">{{ $name }}</a></span>
+      <span><a class="post-link" href="{{ .Permalink }}">{{ $name }}</a></span>
       {{ end }}
     {{ end }}
   </p>
