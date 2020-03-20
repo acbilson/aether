@@ -475,7 +475,11 @@ footer {
     width: 100%;
     max-width: 47rem;
 }
-.pagination-text {
+.newer-page-number {
+  margin: 0 0em 0 0.5em;
+}
+.older-page-number {
+  margin: 0 0.5em 0 0em;
 }
 .pagination-newer {
     float:left;

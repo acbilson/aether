@@ -1,0 +1,33 @@
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+{{ $pages = .Site.RegularPages }}
+{{ end }}
+{{ $paginator := .Paginate (where $pages "Params.displayinlist" "!=" false) -}}
+
+{{ if or ($paginator.HasPrev) ($paginator.HasNext) -}}
+  <nav class="pagination-nav side-padding">
+    {{ if $paginator.HasPrev }}
+    <p class="pagination-newer">
+
+      <a href="{{ $paginator.Prev.URL }}">&lt; Newer Posts</a>
+
+      <!-- all pages that come before the current page -->
+      {{ range where $paginator.Pagers "PageNumber" "lt" $paginator.PageNumber }}
+      <a href="{{ .URL }}" class="newer-page-number">{{ .PageNumber }}</a>
+      {{- end }}
+    </p>
+    {{ end }}
+    {{ if $paginator.HasNext }}
+    <p class="pagination-older">
+
+      <!-- all pages that come after the current page -->
+      {{ range where $paginator.Pagers "PageNumber" "gt" $paginator.PageNumber }}
+      <a href="{{ .URL }}" class="older-page-number">{{ .PageNumber }}</a>
+      {{- end }}
+
+      <a href="{{ $paginator.Next.URL }}">Older Posts &gt;</a>
+
+    </p>
+    {{ end }}
+  </nav>
+{{- end }}

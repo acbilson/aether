@@ -17,25 +17,14 @@
       {{- end }}
       {{ $pages := .Pages }}
       {{ if .IsHome }}
-      {{ $pages = .Site.RegularPages }}
+        {{ $pages = .Site.RegularPages }}
       {{ end }}
       {{ $paginator := .Paginate (where $pages "Params.displayinlist" "!=" false) -}}
       {{- range $paginator.Pages -}}
         {{ .Render "li" }}
       {{- end }}
     </main>
-    {{ if or ($paginator.HasPrev) ($paginator.HasNext) -}}
-    <nav class="pagination-nav side-padding">
-      {{ if $paginator.HasPrev }}<a href="{{ $paginator.Prev.URL }}" class="pagination-newer pagination-text">&lt; Newer Posts</a>{{ end }}
-      {{ if $paginator.HasNext }}
-      <a href="{{ $paginator.Next.URL }}" class="pagination-older pagination-text">Older Posts &gt;</a>
-      <!-- TODO: add page number links -->
-      <!-- {{ range $pagers := $paginator.Pagers }}
-      <a href="{{ $pagers.URL }}">{{ $pagers.PageNumber }}</a>
-      {{- end }} -->
-      {{ end }}
-    </nav>
-    {{- end }}
+    {{ partial "nav-pages.html" . }}
     {{ partial "footer.html" . }}
     {{ partial "scripts.html" . }}
   </body>
