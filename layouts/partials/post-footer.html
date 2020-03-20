@@ -3,7 +3,7 @@
   <h3><a name="citations">Citations</h3>
   <ul>
   {{ range . }}
-    <li class="post-citation">{{ . }}</li>
+  <li class="post-citation"><p>{{ . }}</p></li>
   {{ end }}
   </ul>
 {{ end }}
@@ -11,7 +11,7 @@
   <h3><a name="addendum">Addendum</h3>
   <ul>
   {{ range $index, $val := . }}
-  <li class="post-addendum"><sup>[{{ add $index 1 }}]</sup>{{ $val }}</li>
+  <li class="post-addendum"><p><sup>[{{ add $index 1 }}]</sup>{{ $val }}</p></li>
   {{ end }}
   </ul>
 {{ end }}
