@@ -9,6 +9,7 @@ body {
     background-color: #ecedef;
     margin: 0;
     padding: 0 0 2em 0;
+    line-height: 1.575em;
     display: flex;
     flex-direction: column;
     align-items: center;
