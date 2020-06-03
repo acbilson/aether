@@ -16,6 +16,9 @@
 
   <link href="{{ $style.Permalink }}" rel="stylesheet">
 
+  <!-- adds webmentions -->
+  <link rel="webmention" href="https://webmention.io/alexbilson.dev/webmention" />
+
   <!-- adds RSS feed -->
   {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}

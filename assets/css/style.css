@@ -1,4 +1,4 @@
-/* 
+/*
  * Primary CSS
  */
 
@@ -53,7 +53,7 @@ blockquote p {
 }
 ul,
 ol {
-    padding-left: 1.6em; 
+    padding-left: 1.6em;
 }
 li ul, li ol {
     padding-left: 1em;
@@ -109,7 +109,7 @@ footer {
     margin: 2em 0 0 0;
 }
 
-/* 
+/*
  * Navigation CSS
  */
 
@@ -209,7 +209,7 @@ footer {
     color: white;
 }
 
-/* 
+/*
  * Single Post CSS
  */
 
@@ -258,7 +258,7 @@ footer {
     box-shadow: 0 0.7rem 1.4rem 0 rgba(0,0,0,0.25), 0 0.5rem 0.5rem 0 rgba(0,0,0,0.22);
 }
 
-/* 
+/*
  * Post Header CSS
  */
 
@@ -283,7 +283,7 @@ footer {
     color: #7a7b7c;
 }
 
-/* 
+/*
  * Inline Quotes CSS
  */
 
@@ -301,7 +301,7 @@ footer {
   background-color: #ecedef;
 }
 
-/* 
+/*
  * Post Footer CSS
  */
 
@@ -330,7 +330,7 @@ footer {
 
 }
 
-/* 
+/*
  * List Page CSS
  */
 
@@ -353,7 +353,7 @@ footer {
     line-height: 1.6em;
 }
 
-/* 
+/*
  * Card CSS
  */
 
@@ -374,6 +374,45 @@ footer {
     transition: transform 0.2s cubic-bezier(0.25,0.8,0.25,1), box-shadow 0.2s cubic-bezier(0.25,0.8,0.25,1);
     box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.19), 0 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.23);
 }
+
+
+/*
+ * page footer
+ */
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 49rem;
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.19), 0 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.23);
+  border-radius: 1em;
+
+}
+
+.footer-info {
+  flex: 30%;
+  text-align: center;
+}
+
+.footer-text {
+  flex: 70%;
+  left-padding: 20%;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 12px;
+
+}
+
+.u-photo {
+  position: relative;
+  max-width: 125px;
+  left: 25%;
+  border-radius: 50%;
+}
+
 .home-card {
     padding: 0.8em;
     font-size: 2em;
@@ -446,7 +485,7 @@ footer {
     max-width: 49rem;
 }
 
-/* 
+/*
  * Diagram CSS
  */
 
@@ -467,7 +506,7 @@ footer {
   opacity: 40%;
 }
 
-/* 
+/*
  * Pagination CSS
  */
 
@@ -545,7 +584,7 @@ footer {
     clear: both;
 }
 
-/* 
+/*
  * Small Screen CSS
  */
 
