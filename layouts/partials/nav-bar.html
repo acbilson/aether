@@ -1,7 +1,13 @@
 <nav class="nav-bar side-padding">
-  <h1 class="nav-header">
-    <a href="{{ .Site.BaseURL }}" class="nav-text">{{- $.Site.Title -}}</a>
-  </h1>
+  <p class="nav-header">
+    <a href="{{ .Site.BaseURL }}">Home</a>
+    <a href="{{ .Site.BaseURL }}posts/">All</a>
+    {{ range $key, $value := .Site.Taxonomies.categories -}}
+      {{ with $.Site.GetPage (printf "%s%s" "categories/" ($key | urlize)) }}
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ end }}
+    {{- end }}
+  </p>
   <div class="hamburger-menu">
     <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
       <span></span>

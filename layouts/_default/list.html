@@ -24,7 +24,9 @@
         {{ .Render "li" }}
       {{- end }}
     </main>
-    {{ partial "nav-pages.html" . }}
+    {{ if not .IsHome }}
+      {{ partial "nav-pages.html" . }}
+    {{ end }}
     {{ partial "footer.html" . }}
     {{ partial "scripts.html" . }}
   </body>

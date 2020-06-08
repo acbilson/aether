@@ -6,7 +6,6 @@ body {
     font-family: 'Book Antiqua', serif;
     font-size: 1.125em;
     color: #141823;
-    background-color: #ecedef;
     margin: 0;
     padding: 0 0 2em 0;
     line-height: 1.575em;
@@ -106,7 +105,6 @@ tr:nth-child(even) td {
 footer {
     font-size: 0.8em;
     padding: 2em 0;
-    margin: 2em 0 0 0;
 }
 
 /*
@@ -511,7 +509,6 @@ footer {
  */
 
 .pagination-nav {
-    margin: 2em 0;
     width: 100%;
     max-width: 47rem;
 }
