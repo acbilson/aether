@@ -1,7 +1,7 @@
 <nav class="nav-bar side-padding">
   <p class="nav-header">
     <a href="{{ .Site.BaseURL }}">Home</a>
-    <a href="{{ .Site.BaseURL }}posts/">All</a>
+    <a href="{{ .Site.BaseURL }}/posts/">All</a>
     {{ range $key, $value := .Site.Taxonomies.categories -}}
       {{ with $.Site.GetPage (printf "%s%s" "categories/" ($key | urlize)) }}
       <a href="{{ .Permalink }}">{{ .Title }}</a>

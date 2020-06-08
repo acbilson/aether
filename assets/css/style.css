@@ -118,6 +118,9 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    background: white;
+    z-index: 10;
 }
 .nav-header {
     font-family: Verdana, Geneva, sans-serif;
@@ -212,7 +215,7 @@ footer {
  */
 
 .post {
-    margin: 0 0 1em 0;
+    margin: 2em 0 1em 0;
 }
 .post-figure {
     margin: 1.5em 0;
@@ -348,6 +351,7 @@ footer {
     margin: 0;
 }
 .list-header-content {
+    margin-top: 100px;
     line-height: 1.6em;
 }
 
@@ -610,6 +614,9 @@ footer {
     }
     .nav-bar {
         padding: 0.8em 0;
+        position: fixed;
+        background: white;
+        z-index: 10;
     }
     .list-header-title {
         font-weight: normal;
@@ -654,7 +661,7 @@ footer {
         border-radius: 0.2rem;
     }
     .post {
-        margin: 1em 1em 2em 1em;
+        margin: 2em 1em 2em 1em;
     }
     .post-title {
         font-size: 2.5em;
