@@ -222,7 +222,9 @@ footer {
 }
 .title-img-container {
   position: relative;
-  width: 100%;
+  width: 50%;
+  height: auto;
+  margin: auto;
 }
 .title-img {
     border-radius: 50%;
@@ -627,7 +629,6 @@ footer {
         font-size: 4em;
     }
     .title-img-overlay {
-      font-size: 2.5em;
     }
 
     .card {
