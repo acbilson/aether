@@ -1,4 +1,19 @@
-<a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)"
-  href="{{ .Site.BaseURL }}" class="card home-card" style="background-image: url({{if isset .Site.Params "homeimg"}} {{ .Site.Params.homeimg | absURL | safeCSS }} {{ else }} {{ "img/grey-cloud.jpg" | absURL | safeCSS }} {{ end }})" rel="bookmark" >
-  Home
-</a>
+<div class="post-content">
+  <!-- Post Image -->
+  {{ with .Params.featuredImage -}}
+  <picture>
+    <img src="{{ .large }}" alt="{{ .alt }}">
+  </picture>
+  {{- end }}
+
+  <!-- Post Table of Contents -->
+  {{ if .Params.toc -}}
+  <h2>Contents</h2>
+  {{ .TableOfContents }}
+  {{- end }}
+
+  <!-- Post Content -->
+  <div class="e-content">
+    {{ .Content }}
+  </div>
+</div>

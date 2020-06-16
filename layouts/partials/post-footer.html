@@ -1,19 +1,28 @@
-<!-- Lists citations and addendum if present in post params -->
-{{ with .Params.citations }}
-<h3><a name="citations">Citations</a></h3>
+<!-- Post Citations & Addendum -->
+<div class="post-footer">
+  {{ with .Params.citations }}
+  <h3><a name="citations">Citations</a></h3>
   <ul>
-  {{ range . }}
-  <li class="post-citation"><p>{{ . }}</p></li>
-  {{ end }}
+    {{ range . }}
+    <li>
+      <p>{{ . }}</p>
+    </li>
+    {{ end }}
   </ul>
-{{ end }}
-{{ with .Params.addendum }}
-<h3><a name="addendum">Addendum</a></h3>
+  {{ end }}
+  {{ with .Params.addendum }}
+  <h3><a name="addendum">Addendum</a></h3>
   <ul>
-  {{ range $index, $val := . }}
-  <li class="post-addendum"><p><sup>[{{ add $index 1 }}]</sup>{{ $val }}</p></li>
-  {{ end }}
+    {{ range $index, $val := . }}
+    <li>
+      <p><sup>[{{ add $index 1 }}]</sup>{{ $val }}</p>
+    </li>
+    {{ end }}
   </ul>
-{{ end }}
+  {{ end }}
 
-<p class="post-footer">To leave a comment, <a class="post-link" href="mailto:acbilson@gmail.com">email me</a> with a reference to this post and I may add your comment. :)</p>
+<!-- Post Closing Comment -->
+<p>To leave a comment, <a class="post-link" href="mailto:acbilson@gmail.com">email me</a> with
+  a reference to this post and I may add your comment. :)</p>
+
+</div>

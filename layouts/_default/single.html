@@ -1,22 +1,79 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" dir="ltr">
-  {{ partial "head.html" . }}
-  <body>
-    <div class="body-container">
-      {{ partial "nav-bar.html" . }}
-      <main class="content side-text-padding">
-        {{ partial "post-header.html" . }}
-        {{ partial "post-content.html" . }}
-        {{ partial "post-footer.html" . }}
-      </main>
-      <nav class="end-nav side-padding">
-        {{ with .PrevInSection }}
-          {{ .Render "li-next" }}
-        {{ end }}
-        {{ partial "home-card.html" . }}
-      </nav>
-      {{ partial "footer.html" . }}
-    </div>
-    {{ partial "scripts.html" . }}
-  </body>
+{{ partial "head.html" . }}
+
+<body>
+  <div class="page-content">
+    {{ partial "nav-bar.html" . }}
+
+    <!-- Content Body -->
+    <article class="card-body h-entry {{ if ne .Params.dropcap false }}dropcase{{ end }}">
+      {{ partial "post-header.html" . }}
+      {{ partial "post-content.html" . }}
+      {{ partial "post-footer.html" . }}
+    </article>
+
+    <!-- Next Post Card -->
+    <nav>
+      {{ with .PrevInSection }}
+      {{ .Render "li-next" }}
+      {{ end }}
+
+      <!-- TODO: Start here-->
+    {{ partial "home-card.html" . }}
+    </nav>
+
+    <!-- BEGIN footer.html -->
+
+    <!-- Company Card -->
+    <footer class="card-body"><a name="card"></a>
+
+      <div class="footer-flex footer-container h-card">
+        <div class="footer-info">
+          <img class="u-photo" src="{{ "img/selfie.jpg" | absURL | safeCSS }}" />
+          <a class="p-name u-url" style="display: none;" href="https://alexbilson.dev">Alex Bilson</a>
+          <a class="u-email" href="mailto:acbilson@gmail.com">acbilson@gmail.com</a><br />
+          <span class="p-locality">Chicago</span>,
+          <span class="p-country-name">Illinois</span>
+        </div>
+
+        <div class="footer-text">
+          <p>Does technology intimidate you? Do you wish that you had a coach who'll build your confidence? A consultant
+            to show you what's possible and integrate your business with the digital community? An analyst who'll
+            protect
+            your digital real estate and optimize your business processes?</p>
+
+          <p>Translating technological chaos into orderly tools for business owners and managers is my passion. Call or
+            text me at (480) 300-1863 to schedule your first experience.</p>
+
+          <p style="text-align: center;">
+            <a href="https://github.com/acbilson" rel="me authn">Alex on Github </a>
+            &#9675;
+            <a href="https://www.linkedin.com/in/alexander-bilson-21089b35/" rel="me"> Alex on LinkedIn</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-copyright"><span>&#169; Copyright 2020, Alex Bilson</span></div>
+
+    </footer>
+
+    <!-- END footer.html -->
+
+    <!-- BEGIN scripts.html -->
+
+    {{ $diagramjs := resources.Get "js/tag-diagram.js" }}
+    {{ $hamburgerjs := resources.Get "js/hamburger.js" }}
+    {{ $accordionjs := resources.Get "js/accordion.js" }}
+    {{ $sitejs := slice $hamburgerjs $accordionjs | resources.Concat "js/concated.js" | minify }}
+
+    <script src="{{ $sitejs.Permalink }}"></script>
+    <script src="{{ $diagramjs.Permalink }}"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- END scripts.html -->
+
+  </div>
+</body>
+
 </html>

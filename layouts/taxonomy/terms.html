@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" dir="ltr">
-  {{ partial "head.html" . }}
+  <!-- BEGIN head.html -->
+  <!-- END head.html -->
   <body class="list-body">
-    {{ partial "nav-bar.html" . }}
+  <!-- BEGIN nav-bar.html -->
+  <!-- END nav-bar.html -->
     <main class="card-container side-gutter">
       {{ if or (not (eq .Description "")) (not (eq .Title "")) -}}
       <header class="list-header">
