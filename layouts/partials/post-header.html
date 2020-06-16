@@ -2,7 +2,7 @@
     <h1 class="p-name post-title">{{ .Title }}</h1>
 <div class="post-attributes">
   <a class="u-url" href=" {{ .Permalink }}"></a>
-  <p>By <a rel="author" class="p-author h-card">Alex Bilson</a></p>
+  <p>By <a rel="author" class="p-author h-card" style="color: #7a7b7c;">Alex Bilson</a></p>
   {{ if isset .Params "date" }}
   <p>Posted <time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>
   {{ end }}
