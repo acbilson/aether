@@ -1,36 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" dir="ltr">
   {{ partial "head.html" . }}
-  <body class="single-body">
-    {{ partial "nav-bar.html" . }}
-    <main class="content side-text-padding">
-      <article class="h-entry post {{ if ne .Params.dropcap false }}dropcase{{ end }}">
-        <header class="post-header">
-        	<h1 class="p-name post-title">{{ .Title }}</h1>
-          {{ partial "post-header.html" . }}
-        </header>
-        {{ with .Params.featuredImage -}}
-        <picture class="post-figure">
-            <img src="{{ .large }}" alt="{{ .alt }}">
-        </picture>
-        {{- end }}
-        {{ if .Params.toc -}}
-          <h2>Contents</h2>
-          {{ .TableOfContents }}
-        {{- end }}
-        <div class="e-content">
-        {{ .Content }}
-        </div>
+  <body>
+    <div class="body-container">
+      {{ partial "nav-bar.html" . }}
+      <main class="content side-text-padding">
+        {{ partial "post-header.html" . }}
+        {{ partial "post-content.html" . }}
         {{ partial "post-footer.html" . }}
-      </article>
-    </main>
-    <nav class="end-nav side-padding">
-      {{ with .PrevInSection }}
-      {{ .Render "li-next" }}
-      {{ end }}
-      {{ partial "home-card.html" . }}
-    </nav>
-    {{ partial "footer.html" . }}
+      </main>
+      <nav class="end-nav side-padding">
+        {{ with .PrevInSection }}
+          {{ .Render "li-next" }}
+        {{ end }}
+        {{ partial "home-card.html" . }}
+      </nav>
+      {{ partial "footer.html" . }}
+    </div>
     {{ partial "scripts.html" . }}
   </body>
 </html>
