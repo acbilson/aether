@@ -301,9 +301,13 @@ h1.list-header-title {
 }
 
 .title-img-overlay {
-    padding: 0.5em 0em 0.7em 0em;
+    padding: 0 0.7em;
     position: absolute;
-    left: 30%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
     text-align: center;
     background-color: #ecedef;
     z-index: 1;
