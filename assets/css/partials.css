@@ -39,18 +39,13 @@ h1.post-title {
 
 .post-attributes {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column;
     justify-content: space-evenly;
 }
 
 .post-attributes>p {
     margin: 0;
-}
-
-.post-attributes>p+p {
-    margin-left: 1em;
-    padding-left: 1em;
-    border-left: thin solid #7a7b7c;
+    text-align: center;
 }
 
 .post-link {
@@ -59,8 +54,16 @@ h1.post-title {
 
 @media screen and (min-width: 40.063em) {
     .post-header {
-        padding-top: 1em;
+        padding-top: 1.5em;
     }
+
+    .post-attributes {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+    }
+
+
 }
 
 /* END Post Header CSS */
@@ -252,7 +255,7 @@ h1.list-header-title {
 
  .list-pagination-container {
      display: flex;
-     margin-top: 1em;
+     margin: 1em;
  }
 
  .list-pagination-left {
@@ -274,226 +277,3 @@ h1.list-header-title {
  }
 
 /* END List Pagination CSS */
-/*
-
-DELETE AFTER THIS
-
-*/
-
-/*
- * Single Post CSS
- */
-
-.title-img-container {
-    position: relative;
-    width: 50%;
-    height: auto;
-    margin: auto;
-}
-
-.title-img {
-    border-radius: 50%;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.19), 0 0.3rem 0.3rem -0.1rem rgba(0, 0, 0, 0.23);
-    z-index: 0
-}
-
-.title-img-overlay {
-    padding: 0.5em 0em 0.7em 0em;
-    position: absolute;
-    left: 30%;
-    width: 40%;
-    text-align: center;
-    background-color: #ecedef;
-    z-index: 1;
-    border-radius: 50%;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.19), 0 0.3rem 0.3rem -0.1rem rgba(0, 0, 0, 0.23) inset;
-}
-
-.dropcase>p:first-of-type::first-letter {
-    float: left;
-    font-size: 3em;
-    line-height: 1;
-    margin: 0.05em 0.15em -0.1em 0;
-    /* initial-letter: 2; Maybe someday*/
-}
-
-.body-container {
-    background-color: white;
-    padding: 2em 0;
-    width: 100%;
-    max-width: 52rem;
-}
-
-/*
- * Post Header CSS
- */
-
-/*
- * Inline Quotes CSS
- */
-
-.post-accordion-hide {
-    display: none;
-}
-
-.post-accordion {}
-
-.post-accordion-quote:hover {
-    background-color: white;
-}
-
-.post-accordion-quote {
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.19) inset, 0 0.3rem 0.3rem -0.1rem rgba(0, 0, 0, 0.23) inset;
-    background-color: #ecedef;
-}
-
-/*
- * Post Footer CSS
- */
-
-.post-list {
-    background-color: white;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.19), 0 0.3rem 0.3rem -0.1rem rgba(0, 0, 0, 0.23);
-    border-radius: 1em;
-}
-
-/*
- * List Page CSS
- */
-
-/*
- * Card CSS
- */
-
-.card-container {
-    max-width: 49rem;
-}
-
-.card-container>a:first-of-type {
-    margin-top: 5em;
-}
-
-.card {
-    display: block;
-    margin: 2.2rem 0;
-    box-sizing: border-box;
-    background-color: white;
-    text-decoration: none;
-    border-radius: 0.3rem;
-}
-
-/*
- * page footer
- */
-
-/*
- * Diagram CSS
- */
-
-.diagram-svg {}
-
-.diagram-node-circle {
-    stroke: black;
-    fill: gray;
-}
-
-.diagram-node-text {
-    fill: black;
-    font-variant: small-caps;
-    font-family: Verdana, Geneva, sans-serif;
-}
-
-.diagram-link {
-    stroke: gray;
-    stroke-width: 1;
-    opacity: 40%;
-}
-
-/*
- * Pagination CSS
- */
-
-.pagination-nav {
-    width: 100%;
-    max-width: 47rem;
-}
-
-.newer-page-number {
-    margin: 0 0em 0 0.5em;
-}
-
-.older-page-number {
-    margin: 0 0.5em 0 0em;
-}
-
-.pagination-newer {
-    float: left;
-}
-
-.pagination-older {
-    float: right;
-}
-
-.button {
-    padding: 0.5em 0.6em;
-    background-color: #FFF;
-    text-decoration: none;
-    border-radius: 0.3rem;
-    transition: transform 0.1s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.1s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.16), 0 0.15rem 0.3rem rgba(0, 0, 0, 0.23);
-}
-
-.button:hover {
-    box-shadow: 0 0.05rem 0.15rem rgba(0, 0, 0, 0.12), 0 0.05rem 0.1rem rgba(0, 0, 0, 0.24);
-    transform: scale(0.97);
-}
-
-.button:active {
-    transform: scale(1);
-}
-
-.side-gutter {
-    margin-left: 1.2rem !important;
-    margin-right: 1.2rem !important;
-}
-
-.small-pic {
-    display: block;
-    margin-top: 1.5em;
-}
-
-.small-img {
-    width: unset;
-    max-width: 100%;
-    margin: 0 auto 1.5em auto;
-}
-
-.katex-display {
-    margin: 1.5em 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-
-#disqus_thread {
-    margin-top: 5em;
-}
-
-.no-scroll {
-    overflow: hidden;
-    position: fixed;
-}
-
-.clear {
-    clear: both;
-}
-
-.tag-card {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-.end-nav {
-    width: 100%;
-    max-width: 49rem;
-}

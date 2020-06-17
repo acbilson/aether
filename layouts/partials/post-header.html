@@ -2,11 +2,10 @@
 
   <!-- Post Title -->
   <h1 class="p-name post-title">{{ .Title }}</h1>
+  <a class="u-url" href=" {{ .Permalink }}"></a>
 
   <!-- Post Attributes -->
   <div class="post-attributes muted-text">
-
-    <a class="u-url" href=" {{ .Permalink }}"></a>
 
     <p>By <a rel="author" class="p-author h-card" style="color: #7a7b7c;">Alex Bilson</a></p>
     {{ if isset .Params "date" }}

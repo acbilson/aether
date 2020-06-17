@@ -1,3 +1,9 @@
+{{ with .Content -}}
+      <section class="post-body">
+        {{ . }}
+      </section>
+      {{- end }}
+
 <!-- Gets regular pages for the site -->
 {{ $pages := .Pages }}
 {{ if .IsHome }}
