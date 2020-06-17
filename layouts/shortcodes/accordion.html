@@ -11,7 +11,9 @@
     id="{{ $id }}-quote" 
     class="post-accordion-quote post-accordion-hide" 
     onclick="accordionHide('{{ $id }}')">
+    <div class="accordion-content">
     {{ .Inner }}
+    </div>
   </blockquote>
 </div>
 
