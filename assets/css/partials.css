@@ -29,9 +29,9 @@
  * Post Header CSS
  */
 
- .post-header {
-     padding-top: 2em;
- }
+.post-header {
+    padding-top: 2em;
+}
 
 h1.post-title {
     font-size: 1.8em;
@@ -61,7 +61,6 @@ h1.post-title {
     .post-header {
         padding-top: 1em;
     }
-
 }
 
 /* END Post Header CSS */
@@ -152,7 +151,6 @@ h1.post-title {
         display: flex;
         flex-direction: row;
     }
-
     .card-text-container {
         text-align: left;
     }
@@ -224,6 +222,58 @@ h1.post-title {
 
 /* END Business Card CSS */
 
+/*
+ * List Header CSS
+ */
+
+.list-header {
+    margin-top: 4em;
+    text-align: center;
+}
+
+h1.list-header-title {
+    margin: 0.1em 0 0.2em 0;
+    font-size: 2.2em;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 40.063em) {
+    .list-header {
+        margin-top: 2em;
+        text-align: center;
+    }
+}
+
+/* END List Header CSS */
+
+/*
+ * List Pagination CSS
+ */
+
+ .list-pagination-container {
+     display: flex;
+     margin-top: 1em;
+ }
+
+ .list-pagination-left {
+     flex: 50%;
+     text-align: left;
+ }
+
+ .list-pagination-left-number {
+     margin-left: 0.2em;
+ }
+
+ .list-pagination-right-number {
+     margin-right: 0.2em;
+ }
+
+ .list-pagination-right {
+     flex: 50%;
+     text-align: right;
+ }
+
+/* END List Pagination CSS */
 /*
 
 DELETE AFTER THIS
@@ -310,29 +360,6 @@ DELETE AFTER THIS
 /*
  * List Page CSS
  */
-
-.list-header {
-    margin: 6em 0;
-    text-align: center;
-}
-
-.list-header-title {
-    margin: 0.1em 0 0.2em 0;
-    font-size: 2.2em;
-    text-transform: uppercase;
-}
-
-.list-header-subtext {
-    font-weight: normal;
-    font-size: 1.5em;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.list-header-content {
-    margin-top: 100px;
-    line-height: 1.6em;
-}
 
 /*
  * Card CSS

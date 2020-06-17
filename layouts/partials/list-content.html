@@ -1,0 +1,11 @@
+<!-- Gets regular pages for the site -->
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+{{ $pages = .Site.RegularPages }}
+{{ end }}
+{{ $paginator := .Paginate (where $pages "Params.displayinlist" "!=" false) -}}
+
+<!-- Renders all page cards -->
+{{- range $paginator.Pages -}}
+{{ .Render "li" }}
+{{- end }}

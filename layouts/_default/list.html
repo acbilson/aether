@@ -1,38 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" dir="ltr">
-  <!-- BEGIN head.html -->
-  <!-- END head.html -->
+{{ partial "head.html" . }}
 
-  <body class="list-body">
-  <!-- BEGIN nav-bar.html -->
-  <!-- END nav-bar.html -->
-    <main class="card-container side-gutter">
-      {{ if or (not (eq .Description "")) (not (eq .Title "")) -}}
-      <header class="list-header">
-        {{ with .Title }}<h1 class="list-header-title">{{ . }}</h1>{{ end }}
-        {{ with .Description }}<p class="list-header-subtext">{{ . }}</p>{{ end }}
-      </header>
-      {{- end }}
-      {{ with .Content -}}
-      <section class="list-header-content">
-        {{ . }}
-      </section>
-      {{- end }}
-      {{ $pages := .Pages }}
-      {{ if .IsHome }}
-        {{ $pages = .Site.RegularPages }}
-      {{ end }}
-      {{ $paginator := .Paginate (where $pages "Params.displayinlist" "!=" false) -}}
-      {{- range $paginator.Pages -}}
-        {{ .Render "li" }}
-      {{- end }}
-    </main>
-    {{ if not .IsHome }}
-      {{ partial "nav-pages.html" . }}
-    {{ end }}
-  <!-- BEGIN footer.html -->
-  <!-- END footer.html -->
-  <!-- BEGIN scripts.html -->
-  <!-- END scripts.html -->
-  </body>
+<body>
+  {{ partial "nav-bar.html" . }}
+  <div class="page-content">
+    {{ partial "list-header.html" . }}
+    {{ partial "list-content.html" . }}
+    {{ partial "list-footer.html" . }}
+    {{ partial "foot.html" . }}
+
+  </div>
+  {{ partial "scripts.html" . }}
+
+</body>
+
 </html>
