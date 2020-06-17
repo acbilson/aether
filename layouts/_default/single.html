@@ -3,8 +3,8 @@
 {{ partial "head.html" . }}
 
 <body>
-  <div class="page-content">
     {{ partial "nav-bar.html" . }}
+  <div class="page-content">
 
     <!-- Content Body -->
     <article class="post-body h-entry {{ if ne .Params.dropcap false }}dropcase{{ end }}">
@@ -13,19 +13,20 @@
       {{ partial "post-footer.html" . }}
     </article>
 
-    <!-- Next Post Card -->
+    <!-- Next Post Card & Home Card -->
     <nav>
       {{ with .PrevInSection }}
       {{ .Render "li-next" }}
       {{ end }}
 
-    {{ partial "home-card.html" . }}
+      {{ partial "home-card.html" . }}
     </nav>
 
-    {{ partial "footer.html" . }}
-    {{ partial "scripts.html" . }}
+    {{ partial "business-card.html" . }}
+    {{ partial "foot.html" . }}
 
   </div>
+  {{ partial "scripts.html" . }}
 </body>
 
 </html>

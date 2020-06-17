@@ -2,7 +2,7 @@
 <nav class="nav-bar">
 
   <!-- Site Links Header -->
-  <p class="nav-header">
+  <div class="nav-header">
     <a href="{{ .Site.BaseURL }}">Home</a>
     <a href="{{ .Site.BaseURL }}/posts/">All</a>
     {{ range $key, $value := .Site.Taxonomies.categories -}}
@@ -10,26 +10,9 @@
     <a href="{{ .Permalink }}">{{ .Title }}</a>
     {{ end }}
     {{- end }}
-  </p>
 
-  <!-- Site Navigation - Top-Right -->
-  <div class="hamburger-menu">
-
-    <!-- Hamburger Button -->
-    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu"
-      aria-label="Menu">
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Navigation Options -->
-    <ul id="menu" class="hamburger-menu-overlay">
-      <li><span class="hamburger-menu-overlay-header">Pages</span></li>
-      <li><a href="{{ .Site.BaseURL }}" class="hamburger-menu-overlay-link">Home</a></li>
-      {{ range where .Site.Pages "Params.displayinmenu" true -}}
-      <li><a href="{{ .Permalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a></li>
-      {{ end -}}
-    </ul>
-
+    {{ range where .Site.Pages "Params.displayinmenu" true -}}
+    <a href="{{ .Permalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a>
+    {{ end -}}
   </div>
 </nav>

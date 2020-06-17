@@ -3,105 +3,24 @@
  */
 
 .nav-bar {
-    background: white;
-    display: flex;
     font-family: Verdana, Geneva, sans-serif;
-    justify-content: space-between;
+    background: white;
     padding: 0;
     position: fixed;
-    width: 50rem;
+    width: 100%;
     z-index: 10;
+    border-bottom: 1px black solid;
 }
 
-p.nav-header {
+.nav-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     margin: 0;
-    padding-left: 1em;
 }
 
-.hamburger-menu {
-    padding-right: 1em;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-.hamburger-menu button {
-    display: block;
-    position: relative;
-    width: 33px;
-    height: 33px;
-    padding: 0px;
-    border: 0px;
-    outline: none;
-    background-color: transparent;
-    z-index: 500;
-    /* and place it over the hamburger */
-    -webkit-touch-callout: none;
-    cursor: pointer;
-}
-
-.hamburger-menu button span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    position: relative;
-    background-color: #141823;
-    border-radius: 3px;
-    transform-origin: center;
-    transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0), background-color 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-}
-
-.hamburger-menu button span:first-of-type {
-    margin-bottom: 5px;
-}
-
-.hamburger-menu-open button span {
-    background-color: white;
-    transform: rotate(45deg) translate(3.2px, 3.2px);
-}
-
-.hamburger-menu-open button span:last-of-type {
-    transform: rotate(-45deg) translate(3.2px, -3.2px);
-}
-
-ul.hamburger-menu-overlay {
-    background-color: #000;
-    box-sizing: border-box;
-    display: block;
-    height: 100%;
-    left: 0;
-    margin: 0;
-    opacity: 0;
-    overflow-y: auto;
-    padding: 3.5em 0 0 0;
-    position: fixed;
-    text-align: center;
-    list-style-type: none;
-    top: 0;
-    transition: visibility 0.2s ease-out, opacity 0.2s ease-out;
-    visibility: hidden;
-    width: 100vw;
-    z-index: 100;
-}
-
-.hamburger-menu-open .hamburger-menu-overlay {
-    visibility: visible;
-    opacity: 0.9;
-}
-
-a.hamburger-menu-overlay-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 2em;
-    line-height: 1.7;
-    color: white;
-}
-
-.hamburger-menu-overlay-header {
-    text-decoration: underline;
-    text-transform: uppercase;
-    font-size: 2em;
-    line-height: 1.7;
-    color: white;
+.nav-header>a {
+    padding-left: 0.5em;
 }
 
 /* END Navigation CSS */
@@ -110,17 +29,39 @@ a.hamburger-menu-overlay-link {
  * Post Header CSS
  */
 
+ .post-header {
+     padding-top: 2em;
+ }
+
 h1.post-title {
     font-size: 1.8em;
 }
 
+.post-attributes {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
 .post-attributes>p {
-    display: block;
     margin: 0;
+}
+
+.post-attributes>p+p {
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: thin solid #7a7b7c;
 }
 
 .post-link {
     color: #7a7b7c;
+}
+
+@media screen and (min-width: 40.063em) {
+    .post-header {
+        padding-top: 1em;
+    }
+
 }
 
 /* END Post Header CSS */
@@ -129,7 +70,9 @@ h1.post-title {
  * Post Content CSS
  */
 
-.post-content {}
+.post-content>picture>img {
+    margin-top: 0.2em;
+}
 
 /* END Post Content CSS */
 
@@ -161,7 +104,7 @@ h1.post-title {
 
 .card-display {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
 }
 
@@ -191,6 +134,7 @@ h1.post-title {
 
 .card-text-container {
     padding: 1em;
+    text-align: center;
 }
 
 .card-title {
@@ -203,20 +147,15 @@ h1.post-title {
     line-height: 1.5;
 }
 
-.card-subtext {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
+@media screen and (min-width: 40.063em) {
+    .card-display {
+        display: flex;
+        flex-direction: row;
+    }
 
-.card-subtext>p {
-    margin: 0;
-}
-
-.card-subtext>p+p {
-    margin-left: 1em;
-    padding-left: 1em;
-    border-left: thin solid #7a7b7c;
+    .card-text-container {
+        text-align: left;
+    }
 }
 
 /* END Card CSS */
@@ -242,28 +181,26 @@ h1.post-title {
 /* END Home Card CSS */
 
 /*
- * Footer Card CSS
+ * Business Card CSS
  */
 
-.footer-container {
+.business-card-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    font-size: 0.8em;
 }
 
-.footer-info {
+.business-card-info {
     flex: 30%;
     text-align: center;
-    padding: 2%;
 }
 
-.footer-text {
+.business-card-text {
     flex: 70%;
-    padding: 2%;
 }
 
 .copyright {
     text-align: right;
-    margin-top: 12px;
     font-size: 0.8em;
 }
 
@@ -275,7 +212,23 @@ h1.post-title {
     margin-right: auto;
 }
 
-/* END Footer Card CSS */
+@media screen and (min-width: 40.063em) {
+    .business-card-container {
+        display: flex;
+        flex-direction: row;
+    }
+    .business-card-text {
+        padding-left: 1em;
+    }
+}
+
+/* END Business Card CSS */
+
+/*
+
+DELETE AFTER THIS
+
+*/
 
 /*
  * Single Post CSS
@@ -406,8 +359,6 @@ h1.post-title {
  * page footer
  */
 
-
-
 /*
  * Diagram CSS
  */
@@ -508,6 +459,7 @@ h1.post-title {
 .clear {
     clear: both;
 }
+
 .tag-card {
     display: flex;
     flex-flow: row wrap;

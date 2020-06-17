@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
     margin: 1.5em 0;
     line-height: 1.575em;
+    text-align: justify;
 }
 
 sup {
@@ -122,11 +123,6 @@ header {
     padding-top: 0.4em;
 }
 
-footer {
-    font-size: 0.8em;
-    padding: 2em 0;
-}
-
 .page-content {
     max-width: 50rem;
 }
@@ -141,4 +137,28 @@ footer {
 .muted-text {
     color: #7a7b7c;
     font-size: 0.8em;
+}
+
+.card-subtext {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-subtext>p {
+    margin: 0;
+}
+
+.card-subtext>p+p {
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: thin solid #7a7b7c;
+}
+
+
+@media screen and (min-width: 40.063em) {
+    .card-subtext {
+        display: flex;
+        justify-content: flex-start;
+    }
 }
