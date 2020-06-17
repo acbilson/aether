@@ -8,10 +8,12 @@
 
   <!-- Post Table of Contents -->
   {{ if .Params.toc -}}
-  <h2>Contents</h2>
-  {{ .TableOfContents }}
+  <div class="post-toc">
+    <h2>Contents</h2>
+    {{ .TableOfContents }}
+  </div>
   {{- end }}
 
   <!-- Post Content -->
-    {{ .Content }}
+  {{ .Content }}
 </div>

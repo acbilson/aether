@@ -52,6 +52,8 @@ h1.post-title {
     color: #7a7b7c;
 }
 
+.post-toc {}
+
 @media screen and (min-width: 40.063em) {
     .post-header {
         padding-top: 1.5em;
@@ -61,6 +63,16 @@ h1.post-title {
         flex-flow: row nowrap;
         justify-content: space-evenly;
     }
+}
+
+@media screen and (min-width: 80em) {
+    .post-toc {
+        position: fixed;
+        top: 2em;
+        left: 0.2em;
+        width: 18%;
+    }
+
 }
 
 /* END Post Header CSS */
