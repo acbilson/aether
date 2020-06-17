@@ -160,144 +160,182 @@ h1.post-title {
         height: 100%;
         width: 15em;
     }
-    /* END Card CSS */
-    /*
- * Home Card CSS
- */
-    .home-card {
-        text-decoration: none;
-        display: block;
-        text-align: center;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-    .home-card>span {
-        font-size: 2em;
-        font-weight: bold;
-        background-color: white;
-        padding: 0 0.4em 0.2em 0.4em;
-    }
-    /* END Home Card CSS */
-    /*
- * Business Card CSS
- */
+}
+
+/* END Card CSS */
+
+/*
+    * Home Card CSS
+    */
+
+.home-card {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.home-card>span {
+    font-size: 2em;
+    font-weight: bold;
+    background-color: white;
+    padding: 0 0.4em 0.2em 0.4em;
+}
+
+/* END Home Card CSS */
+
+/*
+* Business Card CSS
+*/
+
+.business-card-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+}
+
+.business-card-info {
+    flex: 30%;
+    text-align: center;
+}
+
+.business-card-text {
+    flex: 70%;
+}
+
+.copyright {
+    text-align: right;
+    font-size: 0.8em;
+}
+
+.u-photo {
+    position: relative;
+    max-width: 250px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 40.063em) {
     .business-card-container {
         display: flex;
-        flex-direction: column;
-        font-size: 0.8em;
-    }
-    .business-card-info {
-        flex: 30%;
-        text-align: center;
+        flex-direction: row;
     }
     .business-card-text {
-        flex: 70%;
+        padding-left: 1em;
     }
-    .copyright {
-        text-align: right;
-        font-size: 0.8em;
-    }
-    .u-photo {
-        position: relative;
-        max-width: 250px;
-        border-radius: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    @media screen and (min-width: 40.063em) {
-        .business-card-container {
-            display: flex;
-            flex-direction: row;
-        }
-        .business-card-text {
-            padding-left: 1em;
-        }
-    }
-    /* END Business Card CSS */
-    /*
- * List Header CSS
- */
+}
+
+/* END Business Card CSS */
+
+/*
+* List Header CSS
+*/
+
+.list-header {
+    margin-top: 4em;
+    text-align: center;
+}
+
+h1.list-header-title {
+    margin: 0.1em 0 0.2em 0;
+    font-size: 2.2em;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 40.063em) {
     .list-header {
-        margin-top: 4em;
+        margin-top: 2em;
         text-align: center;
     }
-    h1.list-header-title {
-        margin: 0.1em 0 0.2em 0;
-        font-size: 2.2em;
-        text-transform: uppercase;
-    }
-    @media screen and (min-width: 40.063em) {
-        .list-header {
-            margin-top: 2em;
-            text-align: center;
-        }
-    }
-    /* END List Header CSS */
-    /*
-    * List Pagination CSS
-    */
-    .list-pagination-container {
-        display: flex;
-        margin: 1em;
-    }
-    .list-pagination-left {
-        flex: 50%;
-        text-align: left;
-    }
-    .list-pagination-left-number {
-        margin-left: 0.2em;
-    }
-    .list-pagination-right-number {
-        margin-right: 0.2em;
-    }
-    .list-pagination-right {
-        flex: 50%;
-        text-align: right;
-    }
-    /* END List Pagination CSS */
-    /*
-    * Title Page CSS
-    */
-    .title-img-container {
-        position: relative;
-        width: 50%;
-        height: auto;
-        margin: auto;
-    }
-    .title-img {
-        border-radius: 50%;
-        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.19), 0 0.3rem 0.3rem -0.1rem rgba(0, 0, 0, 0.23);
-        z-index: 0
-    }
-    .title-img-overlay {
-        padding: 0.5em 0em 0.7em 0em;
-        position: absolute;
-        left: 30%;
-        width: 40%;
-        text-align: center;
-        background-color: #ecedef;
-        z-index: 1;
-        border-radius: 50%;
-        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.19), 0 0.3rem 0.3rem -0.1rem rgba(0, 0, 0, 0.23) inset;
-    }
-    /* END Title Page CSS */
-    /*
-    * Accordion CSS
-    */
-    .post-accordion-hide {
-        display: none;
-    }
-    .post-accordion-quote:hover {
-        background-color: white;
-    }
-    .post-accordion-quote {
-        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.19) inset, 0 0.3rem 0.3rem -0.1rem rgba(0, 0, 0, 0.23) inset;
-        background-color: #ecedef;
-    }
-    .accordion-content {
-        display: flex;
-        flex-flow: column nowrap;
-    }
-    .accordion-content>p {
-        margin: 0.2em;
-    }
-    /* END Accordion CSS */
+}
+
+/* END List Header CSS */
+
+/*
+* List Pagination CSS
+*/
+
+.list-pagination-container {
+    display: flex;
+    margin: 1em;
+}
+
+.list-pagination-left {
+    flex: 50%;
+    text-align: left;
+}
+
+.list-pagination-left-number {
+    margin-left: 0.2em;
+}
+
+.list-pagination-right-number {
+    margin-right: 0.2em;
+}
+
+.list-pagination-right {
+    flex: 50%;
+    text-align: right;
+}
+
+/* END List Pagination CSS */
+
+/*
+* Title Page CSS
+*/
+
+.title-img-container {
+    position: relative;
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+.title-img {
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.19), 0 0.3rem 0.3rem -0.1rem rgba(0, 0, 0, 0.23);
+    z-index: 0
+}
+
+.title-img-overlay {
+    padding: 0.5em 0em 0.7em 0em;
+    position: absolute;
+    left: 30%;
+    width: 40%;
+    text-align: center;
+    background-color: #ecedef;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.19), 0 0.3rem 0.3rem -0.1rem rgba(0, 0, 0, 0.23) inset;
+}
+
+/* END Title Page CSS */
+
+/*
+* Accordion CSS
+*/
+
+.post-accordion-hide {
+    display: none;
+}
+
+.post-accordion-quote:hover {
+    background-color: white;
+}
+
+.post-accordion-quote {
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.19) inset, 0 0.3rem 0.3rem -0.1rem rgba(0, 0, 0, 0.23) inset;
+    background-color: #ecedef;
+}
+
+.accordion-content {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.accordion-content>p {
+    margin: 0.2em;
+}
+
+/* END Accordion CSS */
