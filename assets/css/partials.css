@@ -52,7 +52,10 @@ h1.post-title {
     color: #7a7b7c;
 }
 
-.post-toc {}
+.post-toc {
+  position: relative;
+  width: inherit;
+}
 
 @media screen and (min-width: 40.063em) {
     .post-header {
@@ -65,6 +68,8 @@ h1.post-title {
     }
 }
 
+/* Moves TOC to sidebar when screen is maximized */
+
 @media screen and (min-width: 80em) {
     .post-toc {
         position: fixed;
@@ -72,7 +77,6 @@ h1.post-title {
         left: 0.2em;
         width: 18%;
     }
-
 }
 
 /* END Post Header CSS */
@@ -95,8 +99,30 @@ h1.post-title {
     display: block;
 }
 
-.post-footer>ul {
+.post-citations>ul {
     list-style-type: none;
+}
+
+.post-addendum>ul {
+    list-style-type: none;
+}
+
+/* Moves citations and addendum
+to sidebar when screen is maximized */
+
+@media screen and (min-width: 80em) {
+    .post-citations {
+        position: fixed;
+        top: 2em;
+        right: 1em;
+        width: 18%;
+    }
+    .post-addendum {
+        position: fixed;
+        top: 2em;
+        right: 1em;
+        width: 18%;
+    }
 }
 
 /* END Post Footer CSS */
@@ -353,6 +379,15 @@ h1.list-header-title {
 
 .accordion-content>p {
     margin: 0.2em;
+}
+
+/* Moves quotes to sidebar when screen is maximized */
+
+@media screen and (min-width: 80em) {
+    .post-accordion {
+        position: absolute;
+        left: 0.2em;
+    }
 }
 
 /* END Accordion CSS */
