@@ -17,10 +17,9 @@
 
   <!-- Renders home page post cards -->
   <h2>Recent Posts</h2>
-  {{- range $paginator.Pages -}}
+  {{- range first 5 (where $pages "Type" "posts") -}}
   {{ .Render "li" }}
   {{- end }}
-
 
 {{ else }}
   {{ $pages := .Pages }}
