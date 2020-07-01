@@ -6,7 +6,6 @@
     font-family: Verdana, Geneva, sans-serif;
     background: white;
     padding: 0;
-    position: fixed;
     width: 100%;
     z-index: 10;
     border-bottom: 1px black solid;
@@ -30,7 +29,6 @@
  */
 
 .post-header {
-    padding-top: 2em;
 }
 
 h1.post-title {
@@ -59,7 +57,6 @@ h1.post-title {
 
 @media screen and (min-width: 40.063em) {
     .post-header {
-        padding-top: 1.5em;
     }
     .post-attributes {
         display: flex;
