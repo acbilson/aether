@@ -125,6 +125,7 @@ header {
 
 .page-content {
     max-width: 50rem;
+    width: 100%;
 }
 
 .post-body {
