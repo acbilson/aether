@@ -1,0 +1,23 @@
+<div class="post-body next-card">
+  <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)"
+    href="{{ .Permalink }}" class="card-display-comment" rel="bookmark">
+
+    <!-- Card Text -->
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+
+  </a>
+  {{ if (and (isset .Params "quote_title") (isset .Params "quote_link")) }}
+  <div class="quote-link">
+    &#128172;
+    <a href="{{ .Params.quote_link }}">{{ .Params.quote_title }}</a>
+  </div>
+  {{ end }}
+
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>
+      {{ if (isset .Params "categories") }}<p>{{ range .Params.categories }}#{{ . | urlize | title }} {{ end }}</p>
+      {{ end }}
+    </div>
+</div>
