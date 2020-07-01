@@ -406,3 +406,14 @@ h1.list-header-title {
 }
 
 /* END Accordion CSS */
+
+
+/*
+* Share CSS
+*/
+
+textarea.comment-body {
+    width: 100%;
+}
+
+/* END Share CSS */
