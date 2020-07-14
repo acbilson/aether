@@ -10,7 +10,7 @@
   <nav class="list-pagination-left">
     {{ if $paginator.HasPrev }}
 
-      <a href="{{ $paginator.Prev.URL }}">&lt; Newer Posts</a>
+    <a href="{{ $paginator.Prev.URL }}">&lt; Newer {{ .Type | title }}</a>
 
       <!-- all pages that come before the current page -->
       {{ range where $paginator.Pagers "PageNumber" "lt" $paginator.PageNumber }}
@@ -26,7 +26,7 @@
       <a href="{{ .URL }}" class="list-pagination-right-number">{{ .PageNumber }}</a>
       {{- end }}
 
-      <a href="{{ $paginator.Next.URL }}">Older Posts &gt;</a>
+      <a href="{{ $paginator.Next.URL }}">Older {{ .Type | title }} &gt;</a>
 
     {{ end }}
   </nav>
