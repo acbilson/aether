@@ -13,10 +13,12 @@
         {{ .Content }}
       </div>
 
+
+      <!-- Quoted Content -->
       {{ if (and (isset .Params "quote_title") (isset .Params "quote_link")) }}
       <div class="quote-link">
         &#128172;
-        <a href="{{ .Params.quote_link }}">{{ .Params.quote_title }}</a>
+        <a href="{{ .Params.quote_link }}" class="u-in-reply-to">{{ .Params.quote_title }}</a>
       </div>
       {{ end }}
 

@@ -6,11 +6,13 @@
     <a href="{{ .Site.BaseURL }}">Home</a>
     <a href="{{ .Site.BaseURL }}/posts/">Posts</a>
     <a href="{{ .Site.BaseURL }}/comments/">Comments</a>
+    <!--
     {{ range $key, $value := .Site.Taxonomies.categories -}}
     {{ with $.Site.GetPage (printf "%s%s" "categories/" ($key | urlize)) }}
     <a href="{{ .Permalink }}">{{ .Title }}</a>
     {{ end }}
     {{- end }}
+    -->
 
     {{ range where .Site.Pages "Params.displayinmenu" true -}}
     <a href="{{ .Permalink }}" class="hamburger-menu-overlay-link">{{ .Title }}</a>
