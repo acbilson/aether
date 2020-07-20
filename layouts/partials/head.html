@@ -29,6 +29,9 @@
   <!-- adds webmentions -->
   <link rel="webmention" href="https://webmention.io/alexbilson.dev/webmention" />
 
+  <!-- adds IndieAuth -->
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+
   <!-- adds RSS feed -->
   {{ range .AlternativeOutputFormats -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
