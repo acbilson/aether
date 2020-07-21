@@ -33,6 +33,9 @@
   <link rel="authorization_endpoint" href="https://indieauth.com/auth">
   <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
 
+  <!-- adds micropub -->
+  <link rel="micropub" href="https://alexbilson.dev/micropub">
+
   <!-- adds RSS feed -->
   {{ range .AlternativeOutputFormats -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
